@@ -1,10 +1,13 @@
+var offsetTop = 100
+var offsetBottom = 120
+
 var Square = function(canvasSetting, x, y, w, h, r1, g1, b1, a1) {
-	this.ratio = canvasSetting.ratio * (canvasSetting.sideLength - 220)
+	this.ratio = canvasSetting.ratio * (canvasSetting.sideLength - (offsetTop+offsetBottom))
 	this.offset = (canvasSetting.sideLength - this.ratio * 430) / 2
 	this.w = this.ratio * w // width
 	this.h = this.ratio * h // height
 	this.x = this.offset + this.ratio * x // x position
-	this.y = this.ratio * y + 100 // y position
+	this.y = this.ratio * y + offsetTop // y position
 
 
 
